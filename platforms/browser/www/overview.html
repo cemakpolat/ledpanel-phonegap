@@ -1,0 +1,51 @@
+<h3>Benötigte Methoden</h3>
+
+<ul>
+    <li>
+        <h5>3.1.8 Tarifzeitoption</h5></li>
+    <li>
+        <h5>3.1.9 Tarif</h5></li>
+    <li>
+        <h5>3.5.5 getTariff</h5></li>
+    <li>
+        <h5>providerAuthentication</h5>
+    </li>
+    <li>
+        <h5> getService und getTariff</h5>
+    </li>
+    <li>
+        <h5>chargeIntervalVolume</h5>
+    </li>
+    <li>
+        <h5>      getTransactions bzw. getServiceTransactions</h5>
+    </li>
+</ul>
+
+<p>Die anderen Methoden, die wir nutzen können:</p>
+<ul>
+    <ul>
+        <li>
+            <h5>providerAuthentication</h5>
+            <p>Bevor ein Anbieter die anderen Methoden aufrufen kann, muss er sich zunächst einmal über diese Methode authentisieren. Die Methode gehört zur Customer Management Schnittstelle und liefert ein Token zurück, dass für alle anderen Methoden mitgegeben werden muss. Es ist bereits ein Anbieter (Redknee) konfiguriert. Die providerId ist „RKN“ und Username und Passwort sind „RKN“ und „psh123“. Diese Daten findest du auch so in den angehängten Beispielen.</p>
+        </li>
+        <li>
+            <h5> getService und getTariff</h5>
+            <p>Diese Methoden gehören zur Tariff Management Schnittstelle. getService liefert alle für eine Dienstleistung konfigurierten Tarife zurück und getTariff liefert die Informationen zu einem ganz bestimmten Tarif. Im installierten System in der Cloud bietet der Anbieter „RKN“ die Dienstleitung „Strom“ an und zwar mit dem Tarif „Strom Variabel“. Auch diese Daten findest du so in den angehängten Beispielen.</p>
+        </li>
+        <li>
+            <h5>chargeIntervalVolume</h5>
+            <p>Diese Methode gehört zur Payment Schnittstelle und erlaubt die Abrechnung bzw. die Kostenberechnung für Verbrauchs-Intervalle. Im installierten Prototyp ist ein Kunde mit der Kundennummer 1010101 angelegt, mit dem man probieren kann. Die angehängten Beispiele für SOAP und REST zeigen die benötigten Parameter für eine Kostenberechnung. Sollen die Verbräuche wirklich abgerechnet werden, so muss nur der Parameter transactionOperationStatus anstatt auf „rated“ auf „charged“ gesetzt werden.</p>
+        </li>
+        <li>
+            <h5>      getTransactions bzw. getServiceTransactions</h5>
+            <p>Diese Methode gehören ebenfalls zur Payment Schnittstelle und erlauben die Abfrage der Transaktionsdaten zu tatsächlich durchgeführten Abrechnungen. getServiceTransactions liefert nur Transaktionen zu einer angegebenen Dienstleistung, während getTransactions die Transaktionen dienstleistungsübergreifend liefert. Beispiele findest du wiederrum in der angehängten ZIP-Datei.</p>
+        </li>
+    </ul>
+</ul>
+
+<p> Unter der URL <a>http://54.220.116.117:8080/pshrtbs/services</a> findest du Links auf WSDLs für die SOAP Schnittstellen und WADLs für die REST Schnittstellen.</p>
+
+
+<p><b>Zusätzlich habe ich den ersten Prototyp für die Tarifkonfigurations-Oberfläche installiert.</b></p>
+
+<p>Du findest sie unter der folgenden URL: <a>http://54.220.116.117:8080/ProSHAPETMG/</a> Mit dieser Oberfläche kannst du dich entweder als neuer Anbieter registrieren oder dich mit dem Usernamen „RKN“ und dem Passwort „psh123“ anmelden. Die Oberfläche erlaubt schon das Erzeugen von Dienstleistungen und damit verbundenen Tarifen, das Verwalten von Kunden und die Abfrage von abgerechneten Daten. Leider gibt es noch keine Anleitung zu der Oberfläche.</p>
